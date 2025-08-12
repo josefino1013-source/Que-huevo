@@ -35,14 +35,30 @@
             font-size: 1.5rem;
             color: #777;
         }
+        button {
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            border: none;
+            background-color: #28a745;
+            color: white;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-bottom: 40px;
+        }
+        button:disabled {
+            background-color: #6c757d;
+            cursor: not-allowed;
+        }
     </style>
 </head>
 <body>
     <h1>🎵 Un pana mío que puso un huevo ahí, huevotrón 🎵</h1>
     <p>Disfruta la música huevologo</p>
 
-    <!-- Música en bucle -->
-    <audio autoplay loop>
+    <button id="playButton">Reproducir Música</button>
+
+    <audio id="audioPlayer" loop>
         <source src="canción.mp3" type="audio/mpeg" />
         Tu navegador no soporta audio.
     </audio>
@@ -50,5 +66,16 @@
     <h1>Coño manin cuánto huevo, real que sí y en bacanería. Tiene este título más que merecido; nunca cambie, pero deje eso huevo que usted no es gallina.</h1>
     <img src="https://es.gizmodo.com/app/uploads/2024/04/a5178dbf4d7d4ec31b2d02cf15d02796.jpg" alt="Gallina con huevo" />
     <footer>🐔 🥚</footer>
+
+    <script>
+        const playButton = document.getElementById('playButton');
+        const audioPlayer = document.getElementById('audioPlayer');
+
+        playButton.addEventListener('click', () => {
+            audioPlayer.play();
+            playButton.disabled = true;
+            playButton.textContent = 'Música sonando...';
+        });
+    </script>
 </body>
 </html>
