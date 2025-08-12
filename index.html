@@ -36,6 +36,43 @@
             color: #777;
         }
     </style>
+    <head>
+    <meta charset="UTF-8">
+    <title>Mi página con música</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f0f0;
+            margin-top: 100px;
+        }
+        button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 15px 25px;
+            font-size: 18px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Bienvenido 🎵</h1>
+    <p>Haz clic para escuchar la música</p>
+
+    <button onclick="document.getElementById('musica').play()">▶ Reproducir Música</button>
+
+    <audio id="musica" loop>
+        <source src="canciones-de-la-granja-de-zenón-1.mp3" type="audio/mpeg">
+        Tu navegador no soporta audio HTML5.
+    </audio>
+
+</body>
 </head>
 <body>
     <h1>Coño manin cuánto huevo, real que sí y en bacanería. Tiene este título más que merecido; nunca cambie, pero deje eso huevo que usted no es gallina.</h1>
